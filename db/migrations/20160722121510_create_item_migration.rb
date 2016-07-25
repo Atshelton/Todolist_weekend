@@ -1,7 +1,7 @@
-class CreateItemsMigration < ActiveRecord::Migration
+class CreateItemMigration < ActiveRecord::Migration
   def change
     create_table(:items) do |t|
-      t.integer :item_id
+      t.integer :list_id
       t.string :name
       t.datetime :added_on
     end

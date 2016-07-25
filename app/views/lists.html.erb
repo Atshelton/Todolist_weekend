@@ -1,0 +1,15 @@
+<main>
+  <h1>These are your incomplete items for this <%= @lists.name %></h1>
+  <h2> <% @lists.name %> </h2>
+  <% @items.each do |item| %>
+    <p>
+      <a href="http://localhost:4567/lists/"><%= item.name %></a>
+    </p>
+  <% end %>
+
+  <form class="" action="/lists" method="post">
+    <label for="name">Add Item?</label>
+    <input type="text" name="items[name]" value="" placeholder="Item to be added">
+    <input type="submit" name="submit" value="Update list">
+  </form>
+</main>

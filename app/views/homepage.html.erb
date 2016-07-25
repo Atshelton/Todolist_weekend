@@ -1,6 +1,19 @@
 <main>
-  <h1>Hello Class</h1>
-</main>
-<aside class="">
+  <h1>Your Personalized To Do List</h1>
+  <h3>These are your current open lists</h3>
+  <p>
+    Last Added
+  </p>
+  <% @lists.each do |list| %>
+    <p>
+      <a href="http://localhost:4567/lists/"><%= list.name %></a>
+    </p>
+  <% end %>
 
-</aside>
+
+  <form class="" action="/lists" method="post">
+    <label for="name">Name</label>
+    <input type="text" name="lists[name]" value="" placeholder="Tasks for the week">
+    <input type="submit" name="submit" value="Add Task">
+  </form>
+</main>
